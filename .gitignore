@@ -1,3 +1,7 @@
+
+# Crush
+.crush/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -14,7 +18,6 @@ develop-eggs/
 downloads/
 eggs/
 .eggs/
-lib/
 lib64/
 parts/
 sdist/
@@ -105,7 +108,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/
@@ -145,7 +147,6 @@ tmp
 # Jetbrains
 .idea
 venv
-output/
 prompts.txt
 image_gen/venv
 image_gen/output/
@@ -227,11 +228,18 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variable files
+# Temporarily commented out to allow editing and consolidation
 .env
 .env.development.local
 .env.test.local
 .env.production.local
 .env.local
+.env.production
+
+# Plaintext backup files (DO NOT COMMIT)
+*.plaintext.DO-NOT-COMMIT
+.env.plaintext.DO-NOT-COMMIT
+.dev.vars.plaintext.DO-NOT-COMMIT
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -281,4 +289,49 @@ dist
 .pnp.*
 .DS_Store
 
-image_gen/d
+venv/
+cursor-party/
+.aider*
+data/
+text.pollinations.ai/v2/
+# Local Netlify folder
+.netlify
+.dev.vars
+image.pollinations.ai/temp_logs/
+.wrangler/
+# Crush Dev Agent
+.crush/
+
+# Tinybird CLI configuration (contains sensitive tokens)
+.tinyb
+
+# Google Cloud credentials and service account keys
+**/credentials/
+credentials/
+*.json
+!package*.json
+!tsconfig*.json
+!**/package*.json
+!**/tsconfig*.json
+google_*.json
+service-account-*.json
+*-key.json
+*_key.json
+
+# API keys and secrets
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Gateway directory (embedded git repository)
+gateway/
+
+# Kiro AI agent files
+.kiro/
+
+# Secret files
+.secrets
+.github/act-secrets.env
+
+.secrets
